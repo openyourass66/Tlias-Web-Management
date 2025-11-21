@@ -1,12 +1,9 @@
 package com.zhang.Controller;
 
-import ch.qos.logback.core.model.processor.PhaseIndicator;
 import com.zhang.Service.DeptService;
 import com.zhang.pojo.Dept;
 import com.zhang.pojo.Result;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Insert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
