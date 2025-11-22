@@ -5,6 +5,7 @@ import com.zhang.pojo.EmpQueryParam;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface EmpMapper {
@@ -20,5 +21,8 @@ public interface EmpMapper {
     void update(Emp emp);
     //删除员工
     void deleteByIds(List<Integer> ids);
-
+    //统计职位人数
+    List<Map<String,Object>> getEmpJobData();
+    //统计性别数据
+    List<Map<String,Object>> getEmpGenderData();
 }

@@ -55,4 +55,5 @@ public class EmpController {
         empService.deleteByIds(ids);
         return Result.success();
     }
+    //职位统计
 }
