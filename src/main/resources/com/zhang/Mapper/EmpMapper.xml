@@ -16,8 +16,8 @@
             <if test="begin!=null and end!=null">
                 and e.entryDate between #{begin} and #{end}
             </if>
-            order by e.updateTime desc
         </where>
+        order by e.updateTime desc
     </select>
     <resultMap id="empResultMap" type="com.zhang.pojo.Emp">
         <id property="id" column="id"/>
