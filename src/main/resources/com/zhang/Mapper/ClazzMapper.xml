@@ -8,12 +8,21 @@
         select c.*,e.name masterName from Clazz c left join emp e on c.masterId=e.id
         <where>
             <if test="name!=null and name!=''">
-                e.name like concat('%',#{name},'%')
+                c.name like concat('%',#{name},'%')
             </if>
             <if test="begin!=null and end!=null">
                 and c.endDate between #{begin} and #{end}
             </if>
-            order by c.updateTime desc
         </where>
+        order by c.updateTime desc
     </select>
+<!--    添加班级-->
+    <insert id="add" >
+        insert into clazz(name,room,beginDate,endDate,masterId,subject,createTime,updateTime)
+        values(#{name},#{room},#{beginDate},#{endDate},#{masterId},#{subject},#{createTime},#{updateTime})
+    </insert>
+<!--    删除班级-->
+    <delete id="deleteById">
+        delete from clazz where id=#{id}
+    </delete>
 </mapper>

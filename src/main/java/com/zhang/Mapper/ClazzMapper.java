@@ -8,5 +8,10 @@ import java.util.List;
 
 @Mapper
 public interface ClazzMapper {
+    //分页查询
     List<Clazz> list(ClazzQueryParam param);
+    //添加班级
+    void add(Clazz clazz);
+    //删除班级
+    void deleteById(Integer id);
 }
