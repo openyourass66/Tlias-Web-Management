@@ -5,7 +5,7 @@
 <mapper namespace="com.zhang.Mapper.StudentMapper">
 <!--    分页条件查询-->
     <select id="page" resultType="com.zhang.pojo.Student">
-        select s.*,c.name clazzName from student s left join clazz c on s.classId=c.id
+        select s.*,c.name clazzName from student s left join clazz c on s.clazzId=c.id
         <where>
             <if test="name!=null and name!=''">
                 s.name like concat('%',#{name},'%')
@@ -13,8 +13,8 @@
             <if test="degree!=null">
                 and s.degree=#{degree}
             </if>
-            <if test="classId!=null">
-                and s.classId=#{classId}
+            <if test="clazzId!=null">
+                and s.clazzId=#{clazzId}
             </if>
         </where>
         order by s.updateTime desc
