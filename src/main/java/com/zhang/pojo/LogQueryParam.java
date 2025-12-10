@@ -4,10 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigInteger;
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DegreeOption {
-    private String name;
-    private Integer value;
+public class LogQueryParam {
+    private Integer page=1;
+    private Integer pageSize=10;
 }

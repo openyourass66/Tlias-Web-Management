@@ -33,7 +33,7 @@ public class RecordTimeAspect {
         OperateLog operateLog = new OperateLog();
         operateLog.setOperateEmpId(getCurrentId());
         operateLog.setOperateTime(LocalDateTime.now());
-        operateLog.setClassName(pjp.getTarget().getClass().getName());
+        operateLog.setClassName(pjp.getTarget().getClass().getSimpleName());
         operateLog.setMethodName(pjp.getSignature().getName());
         operateLog.setMethodParams(Arrays.toString(pjp.getArgs()));
         operateLog.setReturnValue(result!=null?result.toString():"void");
